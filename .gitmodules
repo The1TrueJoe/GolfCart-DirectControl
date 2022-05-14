@@ -1,0 +1,3 @@
+[submodule "DirectControl/src/ControlLib"]
+	path = DirectControl/src/ControlLib
+	url = https://github.com/GSSM-AutoGolfCart/ControlLib
