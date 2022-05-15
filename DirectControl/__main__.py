@@ -25,7 +25,7 @@ if __name__ == "__main__":
     print(util.info_block)
 
     # Check args
-    if len(sys.argv) == 2:
+    if len(sys.argv) == 1:
         print(util.to_color("Please Specify the Serial Port of the CAN Adapter", "red"))
         print()
 
