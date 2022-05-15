@@ -1,5 +1,5 @@
-from DirectControl.src.ControlLib.ControlLib.src.my_cart import MyCart
-from DirectControl.src.gamepad.controller import Gamepad
+from ControlLib.ControlLib.src.my_cart import MyCart
+from src.gamepad.controller import Gamepad
 
 class Gamepad_Tester:
 

@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     # Imports
     from src.tester import Tester
-    from src.ControlLib.ControlLib.src.my_cart import MyCart
+    from ControlLib.ControlLib.src.my_cart import MyCart
 
     # Run Program
     tester = Tester(cart=MyCart("config.json"))

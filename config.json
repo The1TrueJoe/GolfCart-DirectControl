@@ -1,11 +1,11 @@
 {
     "log": true,
     "log_messages": true,
-    "logging_path": "",
+    "logging_path": "logs",
     "direction_controller_addr": 1,
     "accessory_controller_addr": 2,
     "drive_controller_addr": 3,
-    "can_adapter_port": "/dev/ttyACM0",
+    "can_adapter_port": "/dev/ttys004",
     "can_adapter_baud": 115200
 
 }

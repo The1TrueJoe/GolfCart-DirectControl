@@ -1,8 +1,7 @@
-import keyboard
 import logging
 
-from src.ControlLib.ControlLib.src.my_cart import MyCart
-import src.ControlLib.ControlLib.src.raw.can_messages as msg
+from ControlLib.ControlLib.src.my_cart import MyCart
+import ControlLib.ControlLib.src.raw.can_messages as msg
 
 class Keyboard_Tester:
 
@@ -13,7 +12,7 @@ class Keyboard_Tester:
         # Setup the message logging
         self.logger = logging.getLogger("keyboard")
         self.logger.setLevel(logging.DEBUG)
-        file_handler = logging.FileHandler("keyboard.log")
+        file_handler = logging.FileHandler(self.cart.config["logging_path"] + "keyboard.log")
         file_handler.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
         self.logger.addHandler(file_handler)
 
@@ -38,16 +37,14 @@ class Keyboard_Tester:
         }
 
     def run(self):
-        self.gamepad.startListener()
-
         while(True):
             self.perodic()
 
     # Periodic Loop
     def perodic(self):
-        key = keyboard.read_key()
+        key = input()
 
-        self.logger.log(key)
+        self.logger.info(key)
         self.button_map[key]()
 
     def noAction(self):

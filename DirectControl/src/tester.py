@@ -1,6 +1,6 @@
 import src.util as util
 
-from src.ControlLib.ControlLib.src.my_cart import MyCart
+from ControlLib.ControlLib.src.my_cart import MyCart
 
 from src.gamepad.gamepad_tester import Gamepad_Tester
 from src.keyboard.keyboard_tester import Keyboard_Tester
@@ -20,7 +20,12 @@ class Tester:
 
     # Run
     def run(self):
-        self.main_menu()
+        try:
+            self.main_menu()
+        
+        except KeyboardInterrupt:
+            print("Exiting")
+            pass
 
     # Main menu
     def main_menu(self):
@@ -44,8 +49,8 @@ class Tester:
             tester.run()
 
         elif option == 2:
-            teser = Gamepad_Tester(self.cart)
-            teser.run()
+            tester = Gamepad_Tester(self.cart)
+            tester.run()
 
         elif option == 3:
             exit(0)
