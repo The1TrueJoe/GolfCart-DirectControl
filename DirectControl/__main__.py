@@ -24,13 +24,6 @@ if __name__ == "__main__":
     print(util.to_color(util.title, "cyan"))
     print(util.info_block)
 
-    # Check args
-    if len(sys.argv) == 1:
-        print(util.to_color("Please Specify the Serial Port of the CAN Adapter", "red"))
-        print()
-
-        sys.exit(1)
-
     # Imports
     from src.tester import Tester
     from ControlLib.ControlLib.src.my_cart import MyCart
